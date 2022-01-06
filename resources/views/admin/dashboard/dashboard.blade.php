@@ -12,7 +12,7 @@
     <meta name="author" content="Sunset Orange">
     <title>Dashboard</title>
     <link rel="apple-touch-icon" href="http://127.0.0.1:8000/images/logo/logosmk.png">
-    <link rel="shortcut icon" type="image/x-icon" href="http://127.0.0.1:8000/images/logo/logosmk.png">
+    <link rel="shortcut icon" type="image/x-icon" href="https://pbs.twimg.com/profile_images/1163911054788833282/AcA2LnWL_400x400.jpg">
 
         <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/vendors/css/vendors.min.css">

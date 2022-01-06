@@ -59,9 +59,8 @@
                             <tr>
                                 <th scope="col">No.</th>
                                 <th scope="col">Nama</th>
-                                <th scope="col">Gambar</th>
+                             
                                 <th scope="col">Email</th>
-                                <th scope="col">Register</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -69,9 +68,9 @@
                             <tr>
                                 <th scope="row">{{$loop->iteration}}</th>
                                 <td>{{$acc->name}}</td>
-                                <td><img src="{{asset('/images/profile_user/' . $acc->image)}}" height="100" width="100" alt=""></td>
+                               
                                 <td>{{$acc->email}}</td>
-                                <td>{{$acc->created_at}}</td>
+                         
                             </tr>
                             @endforeach
                         </tbody>
