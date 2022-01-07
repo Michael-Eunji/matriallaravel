@@ -6,7 +6,60 @@ use App\Models\Data_absen;
 @endphp
 @extends('layouts.app')
 @section('content')
+ <!-- BEGIN: Main Menu-->
+ <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
+        <div class="navbar-header">
+            <ul class="nav navbar-nav flex-row">
+                <li class="nav-item mr-auto"><a class="navbar-brand" href="">
+                        <img src="https://pbs.twimg.com/profile_images/1163911054788833282/AcA2LnWL_400x400.jpg" height="40" width="40">
+                        <h3 class="brand-text">Projek</h3>
+                    </a></li>
+                <li class="nav-item nav-toggle">
+                    <a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse">
+                        <i class="d-block d-xl-none text-primary toggle-icon font-medium-4" data-feather="x"></i>
+                        
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="shadow-bottom"></div>
+        <div class="main-menu-content">
+            <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
 
+                <hr>
+                
+
+                
+                    
+                                            <li class="active nav-item">
+                        
+                    <a class="d-flex align-items-center" href="/dashboard"><i
+                            data-feather="pie-chart"></i><span class="menu-title text-truncate"
+                            data-i18n="Calendar">Dashboard</span>
+                    </a>
+                
+                    
+                                            <li class=" nav-item">
+                    
+                    <a class="d-flex align-items-center" href=""><i
+                            data-feather="package"></i><span class="menu-title text-truncate"
+                            data-i18n="Calendar">Friends</span>
+                    </a>
+                
+                    
+                                            <li class=" nav-item">
+                    
+                    <a class="d-flex align-items-center" href=""><i
+                            data-feather="settings"></i><span class="menu-title text-truncate"
+                            data-i18n="Calendar">Groups</span>
+                    </a>
+                
+                
+                
+            </ul>
+        </div>
+    </div>
+    <!-- END: Main Menu-->
     <div class="app-content content ">
         <div class="content-overlay"></div>
         <div class="header-navbar-shadow"></div>
@@ -102,15 +155,9 @@ use App\Models\Data_absen;
                             <div class="col-12 col-lg-10 col-lg-offset-3 mx-auto">
                                 <div class="pricing-trial-content d-flex justify-content-between">
                                     <div class="text-center text-md-left mt-3">
-                                        <h3 class="text-primary">Selamat datang di UD CIPTA INDAH. </h5>
-                                            <h5>Membangun dengan sepenuh hati. </h5>
-                                            {{-- <button class="btn btn-primary mt-2 mt-lg-3">Start 14-day FREE trial</button> --}}
-                                    </div>
-
-                                    <!-- image -->
-                                    <img src="{{ asset('/images/build.svg') }}" class="pricing-trial-img img-fluid"
-                                        width="50%" alt="svg img">
-                                </div>
+                                        <h1 class="text-primary">Welcome </h1>
+                                            <h5></h5>
+                                            
                             </div>
                         </div>
                     </div>

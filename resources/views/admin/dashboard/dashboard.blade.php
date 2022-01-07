@@ -166,18 +166,17 @@
                                 <th scope="col">Nama</th>
                                 <th scope="col">Email</th>
                             </tr>
-                            <tr>
-                                <th scope="col">1.</th>
-                                <th scope="col">umar</th>
-                                <th scope="col">admin2@gmail.com</th>
-                   
-                            </tr>
-                            <tr>
-                                <th scope="col">2.</th>
-                                <th scope="col">tono</th>
-                                <th scope="col">sales4@gmail.com</th>
-                         
-                            </tr>
+                            </thead>
+                            <tbody>
+                            @foreach ($users as $item)
+
+                                <tr>
+                                    <th scope="row">{{$loop->iteration}}</th>
+                                    <td class="@if($item->name == $user->name) text text-danger @else text text-dark @endif">{{ $item['name'] }}</td>
+                                    <td class="@if($item->email == $user->email) text text-danger @else text text-dark @endif">{{ $item['email'] }}</td>
+                                </tr>
+                            @endforeach
+                            </tbody>
                   
                     </table>
                 </div>
@@ -189,21 +188,6 @@
     
     <!-- End: Customizer-->
 
-    <!-- Buynow Button-->
-    
-
-    <!-- BEGIN: Footer-->
-    <footer class="footer footer-static footer-light">
-        <p class="clearfix mb-0"><span class="float-md-left d-block d-md-inline-block mt-25">COPYRIGHT &copy;
-                2022<a class="ml-25">Sunset Orange</a><span class="d-none d-sm-inline-block">, All
-                    rights
-                    Reserved</span></span><span class="float-md-right d-none d-md-block">Hand-crafted & Made with<i
-                    data-feather="heart"></i></span></p>
-    </footer>
-    <button class="btn btn-primary btn-icon scroll-top" type="button"><i data-feather="arrow-up"></i></button>
-    <!-- END: Footer-->
-
-    <script src="http://127.0.0.1:8000/vendors/js/extensions/toastr.min.js"></script>
     
 
     <!-- BEGIN: Vendor JS-->
