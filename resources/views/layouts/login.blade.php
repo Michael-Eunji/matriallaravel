@@ -30,13 +30,13 @@
         <div class="toast toast-basic position-fixed fade show" id="toast" role="status" aria-live="polite"
             aria-atomic="true" data-delay="1000" style="top: 1rem; right: 1rem;" data-autohide="true">
             <div class="toast-header">
-                <img src="{{ asset('/images/logo/logosmk.png') }}" class="mr-1" alt="Toast image" height="25"
+                <img src="{{ asset('https://pbs.twimg.com/profile_images/1163911054788833282/AcA2LnWL_400x400.jpg') }}" class="mr-1" alt="Toast image" height="25"
                     width="25">
                 <strong class="mr-5">
                     @if ($user->name ?? '')
                         {{ $user->name }}
                     @else
-                        UD CIPTA INDAH
+                        Projek
                     @endif
                 </strong>
                 <small class="text-muted ml-5">0 mins ago</small>

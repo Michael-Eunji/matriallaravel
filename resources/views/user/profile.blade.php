@@ -6,6 +6,40 @@ use App\Models\Data_absen;
 @endphp
 @extends('layouts.app')
 @section('content')
+ <!-- BEGIN: Header-->
+ <nav class="header-navbar navbar navbar-expand-lg align-items-center floating-nav navbar-light navbar-shadow">
+        <div class="navbar-container d-flex content">
+            <div class="bookmark-wrapper d-flex align-items-center">
+                <ul class="nav navbar-nav d-xl-none">
+                    <li class="nav-item"><a class="nav-link menu-toggle" href="javascript:void(0);"><i class="ficon"
+                                data-feather="menu"></i></a></li>
+                </ul>
+            </div>
+            <ul class="nav navbar-nav align-items-center ml-auto">
+
+                <li class="nav-item dropdown dropdown-user"><a class="nav-link dropdown-toggle dropdown-user-link"
+                        id="dropdown-user" href="javascript:void(0);" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        <div class="user-nav d-sm-flex d-none"><span
+                                class="user-name font-weight-bolder">Yuna</span><span
+                                class="user-status"></span></div><span
+                            class="avatar"><img class="round"
+                                src="http://127.0.0.1:8000/images/profile_user/user.webp" alt="avatar" height="40"
+                                width="40"><span class="avatar-status-online"></span></span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-user">
+                        <a class="dropdown-item" href="/user"><i class="mr-50" data-feather="user"></i>
+                            Profile</a>
+
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/logout"><i class="mr-50" data-feather="power"></i> Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- END: Header-->
+
  <!-- BEGIN: Main Menu-->
  <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
         <div class="navbar-header">
@@ -41,18 +75,13 @@ use App\Models\Data_absen;
                     
                                             <li class=" nav-item">
                     
-                    <a class="d-flex align-items-center" href=""><i
-                            data-feather="package"></i><span class="menu-title text-truncate"
-                            data-i18n="Calendar">Friends</span>
+                    <a class="d-flex align-items-center" href="/settings"><i
+                            data-feather="user"></i><span class="menu-title text-truncate"
+                            data-i18n="Calendar">Friends and Groups</span>
                     </a>
                 
                     
-                                            <li class=" nav-item">
-                    
-                    <a class="d-flex align-items-center" href=""><i
-                            data-feather="settings"></i><span class="menu-title text-truncate"
-                            data-i18n="Calendar">Groups</span>
-                    </a>
+               
                 
                 
                 

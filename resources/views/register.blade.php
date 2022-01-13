@@ -1,7 +1,7 @@
 @extends('layouts.login')
 
 @section('title')
-    Registration Account
+    Pendaftaran
 @endsection
 @section('content')
 
@@ -16,33 +16,33 @@
                     <div class="auth-inner row m-0">
                         <!-- Brand logo--><a class="brand-logo" href="javascript:void(0);">
                             <div class="row mx-1 mt-1">
-                                <img class="" src="{{ asset('/images/logo/logosmk.png') }}" height="40" width="40">
-                                <h2 class="brand-text text-primary ml-1 mt-50">CIPTA INDAH</h2>
+                                <img class="" src="{{ asset('https://pbs.twimg.com/profile_images/1163911054788833282/AcA2LnWL_400x400.jpg') }}" height="40" width="40">
+                                <h2 class="brand-text text-primary ml-1 mt-50">Projek</h2>
                             </div>
                         </a>
                         <!-- /Brand logo-->
                         <!-- Left Text-->
                         <div class="d-none d-lg-flex col-lg-8 align-items-center p-5">
                             <div class="w-100 d-lg-flex align-items-center justify-content-center px-5"><img
-                                    class="img-fluid" src="{{ asset('/images/pages/register-v2.svg') }}" alt="Login V2">
+                                    class="img-fluid" src="{{ asset('https://media.istockphoto.com/photos/register-now-concept-picture-id1128916464?k=20&m=1128916464&s=612x612&w=0&h=e1e3oq1o3XBKSBRIl8gXboN9EdNrF408cUjFGhpyISU=') }}" alt="Login V2">
                             </div>
                         </div>
                         <!-- /Left Text-->
                         <!-- Login-->
                         <div class="d-flex col-lg-4 align-items-center auth-bg px-2 p-lg-5">
                             <div class="col-12 col-sm-8 col-md-6 col-lg-12 px-xl-2 mx-auto">
-                                <h2 class="card-title font-weight-bold mb-1">Adventure starts here 🚀</h2>
-                                <p class="card-text mb-2">Start your jouurney with us!</p>
+                                <h2 class="card-title font-weight-bold mb-1">Silahkan Daftar</h2>
+                              
                                 <form method="POST" action="{{ route('register') }}" role="form">
                                     @csrf
                                     @method('POST')
                                     <div class="form-group">
-                                        <label class="form-label" for="login-email">Full Name</label>
+                                        <label class="form-label" for="login-email">Nama Lengkap</label>
                                         <input type="text" name="name" id="name" value="{{ old('name') }}"
                                             class="form-control form-control-user" required="" id="exampleFirstName"
                                             placeholder="Name...">
 
-                                        @error('name')
+                                        @error('nama')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
@@ -88,26 +88,12 @@
                                             </div>
                                         </div>
                                     </div>
-                                    {{-- <div class="form-group">
 
-                                    <label class="form-label" for="login-email">Ajukan akun sebagai</label>
-                                    <div class="input-group">
-                                        <br>
-                                        <select class="select2 form-control form-control-user" id="basicSelect"
-                                            name="pengajuan" required>
-                                            <option value="">--- Pilih ---</option>
-                                            <option value="Staf">Staf</option>
-                                            <option value="Teacher">Teacher</option>
-                                            <option value="Student">Student</option>
-                                        </select>
-                                    </div>
-                                </div> --}}
-
-                                    <button type="submit" class="btn btn-primary btn-block" tabindex="4">Sign up</button>
+                                    <button type="submit" class="btn btn-primary btn-block" tabindex="4">Daftar</button>
                                 </form>
-                                <p class="text-center mt-2"><span>Already have an account?</span><a
-                                        href="/login"><span>&nbsp;Sign in
-                                            instead</span></a></p>
+                                <p class="text-center mt-2"><span>Sudah punya Akun?</span><a
+                                        href="/login"><span>&nbsp;Masuk
+                                            </span></a></p>
                             </div>
                         </div>
                         <!-- /Login-->

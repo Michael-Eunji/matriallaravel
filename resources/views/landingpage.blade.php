@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>UD CIPTA INDAH</title>
+    <title>Projek</title>
     <!-- Favicon-->
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('/images/logo/logosmk.png') }}" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('https://pbs.twimg.com/profile_images/1163911054788833282/AcA2LnWL_400x400.jpg') }}" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
@@ -23,7 +23,7 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand" href="#page-top">UD CIPTA INDAH</a>
+            <a class="navbar-brand" href="#page-top">Projek</a>
             <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button"
                 data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
                 aria-expanded="false" aria-label="Toggle navigation">

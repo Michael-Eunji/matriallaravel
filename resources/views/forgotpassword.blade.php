@@ -1,6 +1,6 @@
 @extends('layouts.login')
 @section('title')
-    Welcome to CIPTA INDAH
+    Projek
 @endsection
 @section('content')
 
@@ -15,15 +15,15 @@
                     <div class="auth-inner row m-0">
                         <!-- Brand logo--><a class="brand-logo" href="javascript:void(0);">
                             <div class="row mx-1 mt-1">
-                                <img class="" src="{{ asset('/images/logo/logosmk.png') }}" height="40" width="40">
-                                <h2 class="brand-text text-primary ml-1 mt-50">CIPTA INDAH</h2>
+                                <img class="" src="{{ asset('https://pbs.twimg.com/profile_images/1163911054788833282/AcA2LnWL_400x400.jpg') }}" height="40" width="40">
+                                <h2 class="brand-text text-primary ml-1 mt-50">Projek</h2>
                             </div>
                         </a>
                         <!-- /Brand logo-->
                         <!-- Left Text-->
                         <div class="d-none d-lg-flex col-lg-8 align-items-center p-5">
                             <div class="w-100 d-lg-flex align-items-center justify-content-center px-5"><img
-                                    class="img-fluid" src="{{ asset('/images/pages/forgot-password-v2.svg') }}"
+                                    class="img-fluid" src="{{ asset('https://www.citrixguru.com/wp-content/uploads/2018/12/PasswordResetShareFile.jpg') }}"
                                     alt="Login V2">
                             </div>
                         </div>
@@ -31,9 +31,8 @@
                         <!-- Login-->
                         <div class="d-flex col-lg-4 align-items-center auth-bg px-2 p-lg-5">
                             <div class="col-12 col-sm-8 col-md-6 col-lg-12 px-xl-2 mx-auto">
-                                <h2 class="card-title font-weight-bold mb-1">Forgot password? 🔒</h2>
-                                <p class="card-text mb-2">Enter your email and we'll send you instructions to reset your
-                                    password</p>
+                                <h2 class="card-title font-weight-bold mb-1">Lupa password? </h2>
+                                <p class="card-text mb-2">Masukkan Email</p>
                                 <form action="{{ url('login/1') }}" method="POST">
                                     @csrf
                                     @method('DELETE')
@@ -42,11 +41,11 @@
                                             aria-describedby="emailHelp" placeholder="Email@mymail.com" maxlength="50"
                                             name="email">
                                     </div>
-                                    <button type="submit" class="btn btn-primary btn-block" tabindex="4">Send reset
-                                        link</button>
+                                    <button type="submit" class="btn btn-primary btn-block" tabindex="4">Kirim link reset
+                                        </button>
                                 </form>
-                                <p class="text-center mt-2"><a href="/login"><i data-feather="chevron-left"></i> Back to
-                                        login</a></p>
+                                <p class="text-center mt-2"><a href="/login"><i data-feather="chevron-left"></i> Kembali kehalaman login
+                                        </a></p>
                             </div>
                         </div>
                         <!-- /Login-->

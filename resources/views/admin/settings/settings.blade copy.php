@@ -5,7 +5,6 @@ use App\Models\Data_komisi;
 
 @extends('layouts.app')
 @push('css')
-
     <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="{{ asset('/vendors/css/vendors.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/vendors/css/forms/wizard/bs-stepper.min.css') }}">
@@ -25,86 +24,8 @@ use App\Models\Data_komisi;
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/core/menu/menu-types/vertical-menu.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/plugins/forms/form-validation.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/plugins/forms/form-wizard.min.css') }}">
-    
 @endpush
 @section('content')
-<nav class="header-navbar navbar navbar-expand-lg align-items-center floating-nav navbar-light navbar-shadow">
-        <div class="navbar-container d-flex content">
-            <div class="bookmark-wrapper d-flex align-items-center">
-                <ul class="nav navbar-nav d-xl-none">
-                    <li class="nav-item"><a class="nav-link menu-toggle" href="javascript:void(0);"><i class="ficon"
-                                data-feather="menu"></i></a></li>
-                </ul>
-            </div>
-            <ul class="nav navbar-nav align-items-center ml-auto">
-
-                <li class="nav-item dropdown dropdown-user"><a class="nav-link dropdown-toggle dropdown-user-link"
-                        id="dropdown-user" href="javascript:void(0);" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false">
-                        <div class="user-nav d-sm-flex d-none"><span
-                                class="user-name font-weight-bolder">Yuna</span><span
-                                class="user-status"></span></div><span
-                            class="avatar"><img class="round"
-                                src="http://127.0.0.1:8000/images/profile_user/user.webp" alt="avatar" height="40"
-                                width="40"><span class="avatar-status-online"></span></span>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-user">
-                        <a class="dropdown-item" href="/user"><i class="mr-50" data-feather="user"></i>
-                            Profile</a>
-
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="/logout"><i class="mr-50" data-feather="power"></i> Logout</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </nav>
-<div class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
-        <div class="navbar-header">
-            <ul class="nav navbar-nav flex-row">
-                <li class="nav-item mr-auto"><a class="navbar-brand" href="">
-                        <img src="https://pbs.twimg.com/profile_images/1163911054788833282/AcA2LnWL_400x400.jpg" height="40" width="40">
-                        <h3 class="brand-text">Projek</h3>
-                    </a></li>
-                <li class="nav-item nav-toggle">
-                    <a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse">
-                        <i class="d-block d-xl-none text-primary toggle-icon font-medium-4" data-feather="x"></i>
-                        
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="shadow-bottom"></div>
-        <div class="main-menu-content">
-            <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-
-                <hr>
-                
-
-                
-                    
-                                            <li class="active nav-item">
-                        
-                    <a class="d-flex align-items-center" href="/dashboard"><i
-                            data-feather="pie-chart"></i><span class="menu-title text-truncate"
-                            data-i18n="Calendar">Dashboard</span>
-                    </a>
-                
-                    
-                                            <li class=" nav-item">
-                    
-                    <a class="d-flex align-items-center" href=""><i
-                            data-feather="user"></i><span class="menu-title text-truncate"
-                            data-i18n="Calendar">Friends and Groups</span>
-                    </a>
-                
-             
-                
-                
-                
-            </ul>
-        </div>
-    </div>
 
     <div class="app-content content ">
         <div class="content-overlay"></div>
@@ -117,7 +38,7 @@ use App\Models\Data_komisi;
                     <div class="col-12">
                         <div class="alert alert-primary" role="alert">
                             <div class="alert-body">
-                                
+                                <strong>Info:</strong> Setting toko, harga, biaya kirim, sales, dan komisi untuk sales.
                             </div>
                         </div>
                     </div>
@@ -128,7 +49,26 @@ use App\Models\Data_komisi;
                         <div class="bs-stepper-header">
 
                             <div class="step" data-target="#account-details-vertical-modern">
-                                <button type="button" class="step-trigger">     
+                                <button type="button" class="step-trigger">
+                                    <span class="bs-stepper-box">
+                                        <i data-feather="dollar-sign" class="font-medium-3"></i>
+                                    </span>
+                                    <span class="bs-stepper-label">
+                                        <span class="bs-stepper-title">Harga Beli/Modal</span>
+                                        <span class="bs-stepper-subtitle">Setting harga beli</span>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="step" data-target="#personal-info-vertical-modern">
+                                <button type="button" class="step-trigger">
+                                    <span class="bs-stepper-box">
+                                        <i data-feather="divide" class="font-medium-3"></i>
+                                    </span>
+                                    <span class="bs-stepper-label">
+                                        <span class="bs-stepper-title">Biaya kirim</span>
+                                        <span class="bs-stepper-subtitle">Setting biaya kirim</span>
+                                    </span>
+                                </button>
                             </div>
                             <div class="step" data-target="#address-step-vertical-modern1">
                                 <button type="button" class="step-trigger">
@@ -142,46 +82,70 @@ use App\Models\Data_komisi;
                             </div>
                             <div class="step" data-target="#address-step-vertical-modern">
                                 <button type="button" class="step-trigger">
-                        
+                                    <span class="bs-stepper-box">
+                                        <i data-feather="user-check" class="font-medium-3"></i>
+                                    </span>
+                                    <span class="bs-stepper-label">
+                                        <span class="bs-stepper-title">Komisi</span>
+                                        <span class="bs-stepper-subtitle">Setting komisi sales</span>
+                                    </span>
+                                </button>
                             </div>
+
                             <div class="step" data-target="#address-step-vertical-modern2">
                                 <button type="button" class="step-trigger">
                                     <span class="bs-stepper-box">
                                         <i data-feather="home" class="font-medium-3"></i>
                                     </span>
                                     <span class="bs-stepper-label">
-                                        <span class="bs-stepper-title">Groups</span>
-                                
+                                        <span class="bs-stepper-title">Toko</span>
+                                        <span class="bs-stepper-subtitle">Setting toko</span>
                                     </span>
                                 </button>
                             </div>
-
+                            <div class="step" data-target="#barang">
+                                <button type="button" class="step-trigger">
+                                    <span class="bs-stepper-box">
+                                        <i data-feather="layers" class="font-medium-3"></i>
+                                    </span>
+                                    <span class="bs-stepper-label">
+                                        <span class="bs-stepper-title">Barang</span>
+                                        <span class="bs-stepper-subtitle">Setting barang</span>
+                                    </span>
+                                </button>
+                            </div>
                         </div>
                         <div class="bs-stepper-content">
                             <div id="address-step-vertical-modern2" class="content">
                                 <div class="content-header">
                                     <div class="row">
                                         <div class="col-8">
-                                            <h5 class="mb-0">Groups</h5>
-                                            <small>Daftar Groups</small>
+                                            <h5 class="mb-0">Toko</h5>
+                                            <small>Daftar toko.</small>
                                         </div>
                                         <div class="col-4 text-right">
                                             <button type="button" class="btn btn-primary btn-icon" data-toggle="modal"
                                                 data-target="#new-task-modal"><i data-feather="plus"></i>
-                                                Tambah Groups
+                                                Add Toko
                                             </button>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-12">
-                                        <label class="form-label" for="vertical-modern-email"><i> Daftar Groups</i></label>
+                                        <label class="form-label" for="vertical-modern-email"><i> Daftar toko dan
+                                                alamat pelanggan.</i></label>
                                         <div class="table-responsive">
                                             <table class="table table-sm table-hover-animation">
                                                 <thead>
                                                     <tr>
-                                                        <th>No.</th>
-                                                        <th>Nama Groups</th>
+                                                        <th>#</th>
+                                                        <th>Nama Toko</th>
+                                                        <th>Nama Pemilik</th>
+                                                        <th>No Telepon</th>
+                                                        <th>Alamat</th>
+                                                        <th>Daerah</th>
+                                                        <th>Sales</th>
                                                         <th>Actions</th>
                                                     </tr>
                                                 </thead>
@@ -196,6 +160,9 @@ use App\Models\Data_komisi;
                                                             <td>{{ $toko->nama_pemilik }}</td>
                                                             <td>{{ $toko->no_tlp }}</td>
                                                             <td>{{ $toko->alamat }}</td>
+                                                            <td>{{ $toko->data_biaya_kirim->daerah }} - Rp.
+                                                                {{ $toko->data_biaya_kirim->biaya_kirim }}</td>
+                                                            <td>{{ $toko->users->name }}</td>
                                                             {{-- <td></td> --}}
                                                             <td>
                                                                 <button class="btn btn-primary round btn-icon"><i
@@ -216,30 +183,45 @@ use App\Models\Data_komisi;
                             <div id="account-details-vertical-modern" class="content">
 
                                 <div class="content-header">
-                                    <h5 class="mb-0"></h5>
-                                    <small class="text-muted"></small>
+                                    <h5 class="mb-0">Setting harga beli/modal</h5>
+                                    <small class="text-muted">Masukan harga beli saat ini.</small>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-5">
                                         <form action="{{ url('settings') }}" method="POST">
                                             @csrf
                                             @method('POST')
-                                           
-                                         
+                                            <input type="hidden" name="type" value="harga">
+                                            <div class="form-group">
+                                                <label class="form-label" for="">Harga beli/modal</label>
+                                                <input type="number" id="" name="harga" class="form-control"
+                                                    placeholder="Rp." required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label" for="vertical-modern-email">Keterangan</label>
+                                                <textarea class="form-control" name="keterangan" id="" cols="30"
+                                                    rows="3"></textarea>
+                                            </div>
                                             <div class="d-flex justify-content-between">
-                                               
-                                                   
+                                                <button type="submit" class="btn btn-success btn-icon">
+                                                    <i data-feather="save" class="align-middle mr-sm-25 mr-0"></i>
+                                                    <span class="align-middle d-sm-inline-block d-none">Save</span>
                                                 </button>
                                             </div>
                                         </form>
                                     </div>
                                     <div class="col-lg-7">
-                                        <label class="form-label" for="vertical-modern-email"><i></i></label>
+                                        <label class="form-label" for="vertical-modern-email"><i> History perubahan
+                                                harga, warna hijau adalah harga aktif saat ini</i></label>
                                         <div class="table-responsive">
                                             <table class="table table-sm table-hover-animation">
                                                 <thead>
                                                     <tr>
-                                                        
+                                                        <th>#</th>
+                                                        <th>Harga Beli/Modal</th>
+                                                        <th>Tanggal</th>
+                                                        <th>Keterangan</th>
+                                                        <th>Hapus</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -428,7 +410,6 @@ use App\Models\Data_komisi;
                                                     <tr>
                                                         <th>No.</th>
                                                         <th>Nama</th>
-                                                        <th>Action</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -446,7 +427,24 @@ use App\Models\Data_komisi;
                                                             <span class="font-weight-bold">{{ $sls->name }}</span>
                                                         </td>
                                                         <td>
-                                                       
+                                                            <a href="{{ url('salesdetail/' . $sls->id . '/' . $dari . '/' . $ke) }}"
+                                                                class="btn btn-success round btn-icon"><i
+                                                                    data-feather="eye"></i></a>
+                                                            @if ($sls->user_role_id == 2 || $sls->user_role_id == 1)
+
+                                                                <a href="{{ url('settings/' . $sls->id) }}"
+                                                                    onclick="return confirm('Nonaktifkan sales?')"
+                                                                    class="btn btn-warning round btn-icon"><i
+                                                                        data-feather="edit"
+                                                                        class="mr-1"></i>Nonaktifkan</a>
+                                                            @else
+                                                                <a href="{{ url('settings/' . $sls->id) }}"
+                                                                    onclick="return confirm('Aktifkan sales?')"
+                                                                    class="btn btn-success round btn-icon"><i
+                                                                        data-feather="edit"
+                                                                        class="mr-1"></i>Aktifkan</a>
+
+                                                            @endif
 
                                                             <button class="btn btn-danger round btn-icon"><i
                                                                     data-feather="trash" data-toggle="modal"
@@ -530,7 +528,7 @@ use App\Models\Data_komisi;
         <div class="modal-dialog sidebar-lg">
             <div class="modal-content p-0">
                 <div class="modal-header align-items-center mb-1">
-                    <h5 class="modal-title">Tambah Groups</h5>
+                    <h5 class="modal-title">Add Toko</h5>
                     <div class="todo-item-action justify-content-end">
                         <button type="button" class="close font-large-1 font-weight-normal py-0" data-dismiss="modal"
                             aria-label="Close">
@@ -546,12 +544,45 @@ use App\Models\Data_komisi;
 
                         <div class="action-tags">
                             <div class="form-group">
-                                <label for="todoTitleAdd" class="form-label">Nama Groups</label>
+                                <label for="todoTitleAdd" class="form-label">Nama Toko</label>
                                 <input type="text" id="todoTitleAdd" name="nama_toko"
-                                    class="new-todo-item-title form-control" placeholder="Nama Groups" required>
+                                    class="new-todo-item-title form-control" placeholder="Nama toko" required>
                             </div>
-                            
-                        
+                            <div class="form-group">
+                                <label for="todoTitleAdd" class="form-label">Nama Pemilik</label>
+                                <input type="text" id="todoTitleAdd" name="nama_pemilik"
+                                    class="new-todo-item-title form-control" placeholder="Nama pemilik">
+                            </div>
+                            <div class="form-group">
+                                <label for="todoTitleAdd" class="form-label">No Telepon</label>
+                                <input type="number" id="todoTitleAdd" name="no_tlp"
+                                    class="new-todo-item-title form-control" placeholder="0876589876">
+                            </div>
+                            <div class="form-group">
+                                <label for="todoTitleAdd" class="form-label">Alamat</label>
+                                <textarea class="form-control" name="alamat" id="" cols="30" rows="3"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="todoTitleAdd" class="form-label">Daerah pengiriman</label>
+                                <select class="select2" name="data_biaya_kirim_id" id="" required>
+                                    <option></option>
+                                    @foreach ($biayakirim as $item)
+                                        <option value="{{ $item->id }}">{{ $item->daerah }} - Rp.
+                                            {{ $item->biaya_kirim }}
+                                        </option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="todoTitleAdd" class="form-label">Sales</label>
+                                <select class="select2" name="users_id" id="" required>
+                                    <option></option>
+                                    @foreach ($salesaktif as $slss)
+
+                                        <option value="{{ $slss->id }}">{{ $slss->name }}
+                                        </option>
+                                    @endforeach
+                                </select>
                             </div>
                         </div>
                         <div class="form-group my-1">
@@ -626,7 +657,7 @@ use App\Models\Data_komisi;
             <div class="modal-dialog sidebar-lg">
                 <div class="modal-content p-0">
                     <div class="modal-header align-items-center mb-1">
-                        <h5 class="modal-title">Edit Groups</h5>
+                        <h5 class="modal-title">Edit Toko</h5>
                         <div class="todo-item-action justify-content-end">
                             <button type="button" class="close font-large-1 font-weight-normal py-0" data-dismiss="modal"
                                 aria-label="Close">
@@ -647,8 +678,53 @@ use App\Models\Data_komisi;
                                         class="new-todo-item-title form-control" placeholder="Nama toko"
                                         value="{{ $toko->nama_toko }}" required>
                                 </div>
-                               
-                              
+                                <div class="form-group">
+                                    <label for="todoTitleAdd" class="form-label">Nama Pemilik</label>
+                                    <input type="text" id="todoTitleAdd" name="nama_pemilik"
+                                        class="new-todo-item-title form-control" placeholder="Nama pemilik"
+                                        value="{{ $toko->nama_pemilik }}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="todoTitleAdd" class="form-label">No Telepon</label>
+                                    <input type="number" id="todoTitleAdd" name="no_tlp"
+                                        class="new-todo-item-title form-control" placeholder="0876589876"
+                                        value="{{ $toko->no_tlp }}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="todoTitleAdd" class="form-label">Alamat</label>
+                                    <textarea class="form-control" name="alamat" id="" cols="30"
+                                        rows="3">{{ $toko->alamat }}</textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="todoTitleAdd" class="form-label">Daerah pengiriman</label>
+                                    <select class="select2" name="data_biaya_kirim_id" id="" required>
+                                        <option></option>
+                                        @foreach ($biayakirim as $item)
+                                            @if ($item->id == $toko->data_biaya_kirim_id)
+                                                <option value="{{ $item->id }}" selected>{{ $item->daerah }} - Rp.
+                                                    {{ $item->biaya_kirim }}
+                                                </option>
+                                            @endif
+                                            <option value="{{ $item->id }}">{{ $item->daerah }} - Rp.
+                                                {{ $item->biaya_kirim }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="todoTitleAdd" class="form-label">Sales</label>
+                                    <select class="select2" name="users_id" id="" required>
+                                        <option></option>
+                                        @foreach ($salesaktif as $slss)
+                                            @if ($slss->id == $toko->users_id)
+                                                <option value="{{ $slss->id }}" selected>{{ $slss->name }}
+                                                </option>
+                                            @endif
+                                            <option value="{{ $slss->id }}">{{ $slss->name }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </div>
 
                             </div>
                             <div class="form-group my-1">
@@ -669,7 +745,7 @@ use App\Models\Data_komisi;
             <div class="modal-dialog modal-dialog-centered modal-xs" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="myModalLabel120">Delete Groups</h5>
+                        <h5 class="modal-title" id="myModalLabel120">Delete toko</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -683,9 +759,11 @@ use App\Models\Data_komisi;
                             Anda akan menghapus:
                             <br>
                             <br>
-                            <strong>Groups: {{ $toko->nama_toko }}</strong><br>
+                            <strong>Toko: {{ $toko->nama_toko }}</strong><br>
+                            <strong>Pemilik: {{ $toko->nama_pemilik }}</strong><br>
                             <br>
                             <br>
+                            Pastikan data yang akan dihapus tidak digunakan lagi!
                         </div>
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-danger">Delete</button>
@@ -861,9 +939,11 @@ use App\Models\Data_komisi;
                             Anda akan menghapus:
                             <br>
                             <br>
-                            <strong>Friends: {{ $sls->name }}</strong><br>
+                            <strong>Sales: {{ $sls->name }}</strong><br>
+                            <strong>Bergabung sejak: {{ $sls->created_at }}</strong>
                             <br>
                             <br>
+                            Pastikan data yang akan dihapus tidak digunakan lagi!
                         </div>
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-danger">Delete</button>

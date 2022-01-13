@@ -1,6 +1,6 @@
 @extends('layouts.login')
 @section('title')
-    Welcome to UD CIPTA INDAH
+    Projek
 @endsection
 @section('content')
 
@@ -16,23 +16,23 @@
                         <!-- Brand logo-->
                         <a class="brand-logo" href="javascript:void(0);">
                             <div class="row mx-1 mt-1">
-                                <img class="" src="{{ asset('/images/logo/logosmk.png') }}" height="40" width="40">
-                                <h2 class="brand-text text-primary ml-1 mt-50">CIPTA INDAH</h2>
+                                <img class="" src="{{ asset('https://pbs.twimg.com/profile_images/1163911054788833282/AcA2LnWL_400x400.jpg') }}" height="40" width="40">
+                                <h2 class="brand-text text-primary ml-1 mt-50">Projek</h2>
                             </div>
                         </a>
                         <!-- /Brand logo-->
                         <!-- Left Text-->
                         <div class="d-none d-lg-flex col-lg-8 align-items-center p-5">
                             <div class="w-100 d-lg-flex align-items-center justify-content-center px-5"><img
-                                    class="img-fluid" src="{{ asset('/images/pages/login-v2.svg') }}" alt="Login V2">
+                                    class="img-fluid" src="{{ asset('https://www.freepnglogos.com/uploads/welcome-png/wonderful-welcome-images-18.png') }}" alt="Login V2">
                             </div>
                         </div>
                         <!-- /Left Text-->
                         <!-- Login-->
                         <div class="d-flex col-lg-4 align-items-center auth-bg px-2 p-lg-5">
                             <div class="col-12 col-sm-8 col-md-6 col-lg-12 px-xl-2 mx-auto">
-                                <h2 class="card-title font-weight-bold mb-1">Welcome to UD CIPTA INDAH 👋</h2>
-                                <p class="card-text mb-2">Please sign-in to your account</p>
+                                <h2 class="card-title font-weight-bold mb-1">Silahkan Login</h2>
+                                <p class="card-text mb-2">Silahkan masukan Email</p>
                                 <form method="POST" action="{{ url('/login') }}" class="user">
                                     @csrf
                                     @method('POST')
@@ -45,7 +45,7 @@
                                     <div class="form-group">
                                         <div class="d-flex justify-content-between">
                                             <label for="login-password">Password</label>
-                                            <a href="/forgotpassword"><small>Forgot
+                                            <a href="/forgotpassword"><small>Lupa
                                                     Password?</small>
                                             </a>
                                         </div>
@@ -60,10 +60,10 @@
                                         </div>
                                     </div>
 
-                                    <button type="submit" class="btn btn-primary btn-block" tabindex="4">Sign in</button>
+                                    <button type="submit" class="btn btn-primary btn-block" tabindex="4">Masuk</button>
                                 </form>
-                                <p class="text-center mt-2"><span>New on our platform?</span><a
-                                        href="{{ route('register') }}"><span>&nbsp;Create an account</span></a></p>
+                                <p class="text-center mt-2"><span>Tidak punya akun?</span><a
+                                        href="{{ route('register') }}"><span>&nbsp;Buat akun</span></a></p>
 
                             </div>
                         </div>

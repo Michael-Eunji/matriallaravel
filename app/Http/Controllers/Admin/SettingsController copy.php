@@ -107,11 +107,7 @@ class SettingsController extends Controller
             $toko = new Data_toko;
 
             $toko->nama_toko = $request->nama_toko;
-            $toko->nama_pemilik = $request->nama_pemilik;
-            $toko->no_tlp = $request->no_tlp;
-            $toko->alamat = $request->alamat;
-            $toko->users_id = $request->users_id;
-            $toko->data_biaya_kirim_id = $request->data_biaya_kirim_id;
+      
 
             $toko->save();
 
@@ -128,7 +124,7 @@ class SettingsController extends Controller
         }
 
         $request->session()->flash('warna', 'success');
-        $request->session()->flash('status',  ' berhasil di simpan');
+        $request->session()->flash('status', $request->type . ' berhasil di simpan');
 
         return redirect()->back();
 
@@ -210,7 +206,7 @@ class SettingsController extends Controller
         }
 
         $request->session()->flash('warna', 'success');
-        $request->session()->flash('status',  ' berhasil di update');
+        $request->session()->flash('status', $request->type . ' berhasil di update');
 
         return redirect()->back();
 
@@ -249,7 +245,7 @@ class SettingsController extends Controller
         }
 
         $request->session()->flash('warna', 'success');
-        $request->session()->flash('status',  ' berhasil di hapus');
+        $request->session()->flash('status', $request->type . ' berhasil di hapus');
 
         return redirect()->back();
     }

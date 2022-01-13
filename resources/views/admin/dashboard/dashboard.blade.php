@@ -33,7 +33,6 @@
     <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/css/core/menu/menu-types/vertical-menu.min.css">
     <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/css/plugins/charts/chart-apex.min.css">
     <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/css/pages/app-invoice-list.min.css">
-    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/css/plugins/extensions/ext-component-toastr.min.css">
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/css/style.css">
     <!-- END: Custom CSS-->
@@ -64,8 +63,8 @@
                         id="dropdown-user" href="javascript:void(0);" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
                         <div class="user-nav d-sm-flex d-none"><span
-                                class="user-name font-weight-bolder">umar</span><span
-                                class="user-status">Admin</span></div><span
+                                class="user-name font-weight-bolder">Yuna</span><span
+                                class="user-status"></span></div><span
                             class="avatar"><img class="round"
                                 src="http://127.0.0.1:8000/images/profile_user/user.webp" alt="avatar" height="40"
                                 width="40"><span class="avatar-status-online"></span></span>
@@ -119,19 +118,13 @@
                     
                                             <li class=" nav-item">
                     
-                    <a class="d-flex align-items-center" href=""><i
-                            data-feather="package"></i><span class="menu-title text-truncate"
-                            data-i18n="Calendar">Friends</span>
+                    <a class="d-flex align-items-center" href="/settings"><i
+                            data-feather="user"></i><span class="menu-title text-truncate"
+                            data-i18n="Calendar">Friends and Groups</span>
                     </a>
                 
                     
-                                            <li class=" nav-item">
-                    
-                    <a class="d-flex align-items-center" href=""><i
-                            data-feather="settings"></i><span class="menu-title text-truncate"
-                            data-i18n="Calendar">Groups</span>
-                    </a>
-                
+            
                 
                 
             </ul>
@@ -149,7 +142,6 @@
             <br>
             <br>
             <br>
-         
             <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Registered Account</h2>
             <!-- Icon Divider-->
             <div class="divider-custom">
